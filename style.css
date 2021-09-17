@@ -1,0 +1,281 @@
+/*
+Theme Name : Pokreni se
+Author: Bojan Vulic
+Description: Simple blog theme
+Version: 1.0
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Montserrat:wght@300;400;700;900&display=swap');
+
+:root {
+    --bodyFont: 'Monserrat', sans-serif;
+    --primaryColor: #272b34;
+    --secondaryColor: #8df48b;
+    --accents: #d85080;
+    --white: #fff;
+    --lightGray: #f1f1f1;
+    --font: 16px;
+    --textShadow: 5px 5px 20px var(--primaryColor);
+    --transition: .3s ease;
+}
+
+body {
+    font-family: var(--bodyFont);
+    font-size: var(--font);
+    background: var(--primaryColor);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 3rem
+}
+
+h2::after {
+    display: block;
+    content: "";
+    width: 20%;
+    height: 5px;
+    background: var(--secondaryColor);
+    margin: 30px auto;
+}
+
+.alert-success {
+    background: var(--secondaryColor);
+}
+
+.btn-danger {
+    color: var(--accents);
+    border: none;
+    color: var(--white);
+}
+
+.btn-danger:hover {
+    background: var(--primaryColor);
+
+}
+
+/********mainHeader*********/
+.mainHeader {
+    background-image: url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+
+nav {
+    position: relative;
+    top: 50px;
+}
+
+.mainHeader hgroup {
+    margin-top: 250px;
+}
+
+hgroup h1 {
+    font-size: 6rem;
+    color: var(--secondaryColor);
+    text-shadow: var(--textShadow);
+}
+
+.navbar-brand {
+    background: var(--secondaryColor);
+    padding: 10px;
+    color: var(--primaryColor) !important;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Faster One', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
+
+}
+
+.navbar-brand:hover {
+    background: var(--primaryColor);
+    color: var(--secondaryColor) !important;
+    transition: var(--transition);
+}
+
+.navbar {
+    padding: 0 20px 0 0;
+    border-bottom: 5px solid var(--secondaryColor);
+    background: var(--primaryColor) !important;
+}
+
+.nav-link {
+    color: var(--secondaryColor) !important;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: var(--white) !important;
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+    color: var(--white) !important;
+}
+
+/*************uvod ***************/
+.uvod {
+    background: var(--primaryColor);
+}
+
+/***********teme*********/
+.teme {
+    background: var(--secondaryColor);
+}
+
+.teme h2::after {
+    background: var(--primaryColor);
+}
+
+.teme i {
+    background: var(--primaryColor);
+    color: var(--white);
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 4rem;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+/********************cta********************/
+.cta {
+    background-image: linear-gradient(rgba(241, 241, 241, .8), rgba(241, 241, 241, .8)), url(img/cta.jpg);
+    background-position: center;
+    background-size: cover;
+    color: var(--primaryColor);
+    padding: 150px 0;
+}
+
+.cta h2::after {
+    background: var(--accents);
+}
+
+/**********footer*******/
+footer {
+    background: var(--primaryColor);
+    border-bottom: 5px solid var(--secondaryColor);
+    border-top: 1px solid var(--secondaryColor);
+}
+
+footer a {
+    color: var(--secondaryColor);
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+/********blogHeader*********/
+.blogHeader {
+    background-image: url(img/blog_header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+
+.blogHeader hgroup {
+    margin-top: 150px;
+}
+
+.blog .text {
+    background: var(--secondaryColor);
+    width: 90%;
+    padding: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: -50px;
+    border-radius: 0 0 50px 0;
+}
+
+.featured-image {
+    position: relative;
+}
+
+.featured-image img {
+    border-radius: 50px 0 0 0;
+    width: 100%;
+    height: auto;
+}
+
+.meta {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: var(--secondaryColor);
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid var(--primaryColor);
+}
+
+.meta a {
+    color: var(--primaryColor);
+    text-decoration: underline;
+}
+
+.meta a:hover {
+    text-decoration: none;
+}
+
+.widget {
+    background: var(--secondaryColor);
+    line-height: 2;
+    border-radius: 50px 0 50px 0;
+}
+
+.widget ul li a {
+    color: var(--primaryColor);
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+.widget ul li a:hover {
+    text-decoration: none;
+    background: var(--primaryColor);
+    color: var(--white);
+    transition: var(--transition);
+}
+
+/********RESPONSIVE***************/
+@media(max-width: 768px) {
+
+    hgroup h1 {
+        font-size: 3rem;
+        text-align: center;
+
+    }
+
+    .lead {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .mainHeader {
+        /*height: 100%;*/
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .mainHeader hgroup {
+        margin-top: 105px;
+    }
+
+    .navbar-toggler {
+        margin: 5px 0 5px 0;
+        background-color: #c1c1c3;
+    }
+    .navbar {
+    padding-right: 0;
+    }
+}
